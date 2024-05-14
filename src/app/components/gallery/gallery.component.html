@@ -1,0 +1,18 @@
+<div class="container py-2">
+    <div class="shadow">
+        <ng-container *ngFor="let image of images; let imageID = index">
+            <div *ngIf="imageIndex === imageID" @fadeIn>
+                <img class="img-gallery img-thumbnail" src="{{ images[imageIndex].imgURL}}"
+                     alt="preview" title="preview">
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="text-center py-2">
+    <button class="btn btn-outline-secondary" (click)="prev()" [disabled]="imageIndex === 0">
+        <i class="fa-solid fa-arrow-left"></i> prev
+    </button>
+    <button class="btn btn-outline-secondary mx-2" (click)="next()" [disabled]="imageIndex >= images.length - 1">
+        next <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
