@@ -1,8 +1,8 @@
 <div class="container py-2">
-    <div class="shadow">
+    <div class="image-wrapper shadow">
         <ng-container *ngFor="let image of images; let imageID = index">
             <div *ngIf="imageIndex === imageID" @fadeIn>
-                <img class="img-gallery img-thumbnail" src="{{ images[imageIndex].imgURL}}"
+                <img class="image img-thumbnail" src="{{ images[imageIndex].imgURL}}"
                      alt="preview" title="preview">
             </div>
         </ng-container>

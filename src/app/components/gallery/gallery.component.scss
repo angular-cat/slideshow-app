@@ -1,4 +1,22 @@
-//.img-gallery {
-//    width: 100%;
-//    height: 710px;
-//}
+@import '../../../styles/breakpoints';
+
+$phones-height: 270px;
+$tablets-height: 240px;
+$desktop-height: 720px;
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: $phones-height;
+    @media screen and (min-width: $tablets) {
+        height: $tablets-height;
+    }
+    @media screen and (min-width: $desktop) {
+        height: $desktop-height;
+    }
+}
